@@ -21,6 +21,8 @@ GEM
     ast (2.4.2)
     concurrent-ruby (1.1.8)
     diff-lcs (1.4.4)
+    factory_bot (6.1.0)
+      activesupport (>= 5.0.0)
     i18n (1.8.8)
       concurrent-ruby (~> 1.0)
     minitest (5.14.3)
@@ -76,6 +78,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  factory_bot
   rspec
   rubocop
   rubocop-airbnb!

@@ -11,3 +11,4 @@ gem "rubocop-airbnb", github: "recitalsoftware/ruby",
                       glob: "rubocop-airbnb/rubocop-airbnb.gemspec",
                       require: false
 gem "rubocop-rspec", require: false
+gem "factory_bot"
