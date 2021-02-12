@@ -1,0 +1,59 @@
+# We want to use rubocop-sorbet, but codeclimate doesn't support that, so we add
+# a base config and only include the sorbet rubocop in development. Codeclimate
+# will explicitly include a codeclimate-specific version of the config that
+# doesn't include that.
+require:
+  - rubocop-airbnb
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'bin/**/*'
+    - 'sorbet/**/*'
+
+Layout/LineLength:
+  Max: 80
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Metrics/BlockLength:
+  Exclude:
+    - config/**/*
+    - spec/**/*
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+
+Style/Documentation:
+  Enabled: false
+
+# rufo prefers double quote style, so set that
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+# Having a comma at the end of a list of multi-line aruments avoids extra diffs
+# on otherwise-untouched lines of code when adding a new item to the end
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+# https://anti-pattern.com/always-use-double-quoted-strings-in-ruby
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# Defaults to 'e', which is an uncomminicative name by reek's rules
+# See some discussion here: https://github.com/rubocop-hq/rubocop/pull/6460
+Naming/RescuedExceptionsVariableName:
+  PreferredName: error
+
+RSpec/EmptyLineAfterSubject:
+  Exclude:
+    - spec/factories/**/*
