@@ -31,7 +31,14 @@ $ bundle exec rubocop . && bundle exec rspec
 
 ## Product Description
 
-TODO
+Recital processes the emails that our users receive, scanning the attachment of
+each to identify if they are a contract and, if so, which contract they are
+about. This mini project is extracted from that setup. The jobs and so on are
+roughly the same as our actual code base. Since these methods are usually called
+by outside services, there is a single orchestrating file (`assignment.rb`) that
+you can run directly to simulate how this code would work in real life.
+Meanwhile, there are tests that more directly test behaviour, also mostly pulled
+from Recital's backend project repository.
 
 ## About The Tech Stack
 
@@ -44,7 +51,15 @@ Some links that may be helpful, should you want them:
 
 ## About the Code
 
-Most of the code is pulled from Recital itself. More info TODO
+- `assignment.rb` runs a simulation of how this code would be called. Each
+  command it runs would normally be executed as a result of an external call,
+  such as a webhook or queue notification.
+- `jobs/` .. background jobs that are executed by a bcakground worker (in
+  Recital, that's Sidekiq)
+  - `jobs/asdf.rb` file description
+- `models/contract_scan_result.rb` - scan result TODO
+- `services/` business logic
+  `services/asdf.rb` file description
 
 ## Tasks
 
