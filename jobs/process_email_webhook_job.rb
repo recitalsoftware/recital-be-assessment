@@ -2,6 +2,7 @@
 # notification of a new email to process.
 
 require "./db/connect"
+require "./services/upload_email_attachments_for_scan_service"
 
 class ProcessEmailWebhookJob
   def self.perform(message)
@@ -11,7 +12,7 @@ class ProcessEmailWebhookJob
     return if message.attachments.blank?
 
     # Here is where the message would be uploaded
-    # UploadEmailAttachmentsForContractScanService.run(message)
+    UploadEmailAttachmentsForScanService.run(message)
   end
 
   def self.save_to_email_cache(message)

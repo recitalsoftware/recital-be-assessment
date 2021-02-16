@@ -1,3 +1,6 @@
+require "./db/connect"
+require "./services/create_attachment_scan_service"
+
 class UploadEmailAttachmentsForScanService
   def self.run(message)
     return if message_already_scanned?(message)
@@ -10,6 +13,6 @@ class UploadEmailAttachmentsForScanService
   def self.message_already_scanned?(message)
     # Ruby returns the value of the last command in a method, without an
     # explicit return keyword
-    Message.find(message.id).exists?
+    Email.where(external_id: message.id).exists?
   end
 end

@@ -29,7 +29,10 @@ $ bundle exec ruby assessment.rb
 
 # Note that running the assessment will update the database, so if you want to
 # refresh it:
-$ rm db/db/sqlite.db && bundle exec ruby db/create.rb
+$ rm db/sqlite.db && bundle exec ruby db/create.rb
+
+# Or just reset it from git:
+$ git checkout -- db/sqlite.db
 
 # But probably tests are all you need:
 $ bundle exec rspec
