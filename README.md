@@ -86,7 +86,11 @@ You will fix a bug, and then add a feature. These will be emailed to you at the 
 scheduled time. The bugs and features are based on real tasks, though obviously are intentionally
 simple to fit in a small time budget.
 
-TODO: Add some info about what the tasks are
+To give you some idea of what to expect:
+- The bug is an issue where attachments are not scanned in a situation where they should.
+- The feature is adopting a new version of the contract scan, which requires a
+  slightly different way of evaluating the "best" result to select if there are
+  more than one potential contract title results detected.
 
 ## Your Solution
 

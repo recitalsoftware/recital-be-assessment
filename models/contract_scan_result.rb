@@ -29,6 +29,7 @@ class ContractScanResult
 
   attr_accessor :raw_result
 
+  # For an exmaple of how the data looks, see spec/factories.rb
   def initialize(opts)
     @raw_result = opts[:raw_result]
   end
