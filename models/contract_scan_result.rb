@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
-require 'json'
+require "json"
 
 class ContractScanResult
-  # There are two scores included in the results: a sentencecore and a extraction
-  # score.
+  # There are two scores included in the results: a sentencecore and a
+  # extraction score.
+  #
   # The first score (at the sentence / phrase level, listed on each `result`
   # object) is the “sentence score” – the strength of the sentence / phrase.
   # I.e. how likely is it that this span of text CONTAINS the right,
