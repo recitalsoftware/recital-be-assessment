@@ -7,11 +7,14 @@ class CreateAssessmentTables < ActiveRecord::Migration[6.1]
   def change
     create_table :attachments do |t|
       t.integer :email_id
+      t.integer :external_id
     end
     create_table :emails do |t|
       t.integer :conversation_id
+      t.integer :external_id
     end
     create_table :conversations do |t|
+      t.integer :external_id
     end
   end
 end
