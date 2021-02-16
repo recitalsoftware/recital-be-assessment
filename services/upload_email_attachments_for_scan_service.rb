@@ -1,4 +1,4 @@
-class UploadEmailAttachmentsForContractScanService
+class UploadEmailAttachmentsForScanService
   def self.run(message)
     return if message_already_scanned?(message)
 
