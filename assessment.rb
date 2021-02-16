@@ -1,6 +1,8 @@
 require "./jobs/process_email_webhook_job"
 require "./jobs/process_contract_scan_result_job"
 
+require "./db/connect"
+
 # Normally these calls would come from external services/triggers. Obviously we
 # don't want external dependencies for this assessment, so this file
 # co-ordinates the "faking" of these processes.

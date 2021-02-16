@@ -18,6 +18,9 @@ normal working hours: M-F 13.00-21.00 CET
 ## Build Setup
 
 ```bash
+" requires a basic database with sqlite
+$ brew install sqlite
+
 # install dependencies
 $ bundle install
 
@@ -43,11 +46,16 @@ from Recital's backend project repository.
 ## About The Tech Stack
 
 This tech stack is a simplified excerpt from the Recital Backend project, with
-Rails, Sorbet, and many other things stripped out.
+Rails, Sorbet, and many other things stripped out. There's a basic database that
+is there mostly because the application logic includes bits that rely on
+persisted data.
 
 Some links that may be helpful, should you want them:
 
-- TODO
+- [Basic intro to database access with
+  ActiveRecord](https://www.devdungeon.com/content/ruby-activerecord-without-rails-tutorial)
+- [Full ActiveRecord
+  docs](https://guides.rubyonrails.org/active_record_basics.html)
 
 ## About the Code
 

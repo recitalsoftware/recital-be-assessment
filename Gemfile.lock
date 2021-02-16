@@ -12,6 +12,11 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    activemodel (6.1.2.1)
+      activesupport (= 6.1.2.1)
+    activerecord (6.1.2.1)
+      activemodel (= 6.1.2.1)
+      activesupport (= 6.1.2.1)
     activesupport (6.1.2.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
@@ -68,6 +73,7 @@ GEM
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
     ruby-progressbar (1.11.0)
+    sqlite3 (1.4.2)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.0.0)
@@ -77,12 +83,14 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
+  activerecord
   activesupport
   factory_bot
   rspec
   rubocop
   rubocop-airbnb!
   rubocop-rspec
+  sqlite3
 
 BUNDLED WITH
    2.2.8
