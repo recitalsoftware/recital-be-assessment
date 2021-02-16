@@ -7,7 +7,7 @@ require "./jobs/process_contract_scan_result_job"
 
 message = {
   data: "This would actually be data fetched from their email",
-  already_exists: false
+  already_exists: false,
 }
 
 ProcessEmailWebhookJob.perform(message)

@@ -67,9 +67,9 @@ FactoryBot.define do
     trait :no_contract_type do
       after(:build) do |result|
         parsed_result = JSON.parse(result.raw_result)
-        parsed_result["results"].reject! { |result|
+        parsed_result["results"].reject! do |result|
           result["scan-key"] == "ContractTitle"
-        }
+        end
         result.raw_result = parsed_result.to_json
       end
     end
@@ -77,9 +77,9 @@ FactoryBot.define do
     trait :no_parties do
       after(:build) do |result|
         parsed_result = JSON.parse(result.raw_result)
-        parsed_result["results"].reject! { |result|
+        parsed_result["results"].reject! do |result|
           result["scan-key"] == "PartyName"
-        }
+        end
         result.raw_result = parsed_result.to_json
       end
     end
