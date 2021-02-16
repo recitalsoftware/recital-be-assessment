@@ -3,7 +3,7 @@
 require "factory_bot"
 require "./models/contract_scan_result"
 
-FactoryBot.describe ContractScanResult do
+RSpec.describe ContractScanResult do
   subject(:result) do
     described_class.new(raw_result: contract_scan_result.raw_result)
   end
