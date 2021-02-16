@@ -7,6 +7,7 @@ ActiveRecord::Base.establish_connection(
 
 class Attachment < ActiveRecord::Base
   belongs_to :email
+  belongs_to :contract
 end
 
 class Email < ActiveRecord::Base
@@ -14,4 +15,10 @@ class Email < ActiveRecord::Base
 end
 
 class Conversation < ActiveRecord::Base
+  belongs_to :contract
+end
+
+class Contract < ActiveRecord::Base
+  has_many :conversations
+  has_many :attachments
 end

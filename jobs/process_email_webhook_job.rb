@@ -10,7 +10,8 @@ class ProcessEmailWebhookJob
     # If there's no attachments then there's nothing to scan
     return if message.attachments.blank?
 
-    UploadEmailAttachmentsForContractScanService.run(message)
+    # Here is where the message would be uploaded
+    # UploadEmailAttachmentsForContractScanService.run(message)
   end
 
   def self.save_to_email_cache(message)

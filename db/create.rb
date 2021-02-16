@@ -16,6 +16,12 @@ class CreateAssessmentTables < ActiveRecord::Migration[6.1]
     create_table :conversations do |t|
       t.integer :external_id
     end
+    create_table :contracts do |t|
+      t.integer :conversation_id
+      t.integer :attachment_id
+      t.string :contract_type
+      t.string :parties
+    end
   end
 end
 

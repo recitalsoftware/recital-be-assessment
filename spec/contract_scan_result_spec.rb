@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "factory_bot"
+require "./spec/spec_helper"
 require "./models/contract_scan_result"
 
 RSpec.describe ContractScanResult do

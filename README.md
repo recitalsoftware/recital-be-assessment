@@ -24,12 +24,18 @@ $ brew install sqlite
 # install dependencies
 $ bundle install
 
-# Run
+# Run example scenario, if you'd like to inspect
 $ bundle exec ruby assessment.rb
-# TODO: Add a shorter command to do this. Also mahybe guard?
+
+# Note that running the assessment will update the database, so if you want to
+# refresh it:
+$ rm db/db/sqlite.db && bundle exec ruby db/create.rb
+
+# But probably tests are all you need:
+$ bundle exec rspec
 
 # Check if it this meets the lint and test requirements:
-$ bundle exec rubocop . && bundle exec rspec
+$ bundle exec rubocop && bundle exec rspec
 ```
 
 ## Product Description
