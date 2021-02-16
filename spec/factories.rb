@@ -58,7 +58,8 @@ FactoryBot.define do
     trait :blacklisted_party do
       after(:build) do |result|
         parsed_result = JSON.parse(result.raw_result)
-        parsed_result["results"][1]["extracted-values"][0]["normalized-value"] = "DELIVERED"
+        parsed_result["results"][1]["extracted-values"][0][
+"normalized-value"] = "DELIVERED"
         result.raw_result = parsed_result.to_json
       end
     end
@@ -66,7 +67,9 @@ FactoryBot.define do
     trait :no_contract_type do
       after(:build) do |result|
         parsed_result = JSON.parse(result.raw_result)
-        parsed_result["results"].reject! { |result| result["scan-key"] == "ContractTitle" }
+        parsed_result["results"].reject! { |result|
+          result["scan-key"] == "ContractTitle"
+        }
         result.raw_result = parsed_result.to_json
       end
     end
@@ -74,7 +77,9 @@ FactoryBot.define do
     trait :no_parties do
       after(:build) do |result|
         parsed_result = JSON.parse(result.raw_result)
-        parsed_result["results"].reject! { |result| result["scan-key"] == "PartyName" }
+        parsed_result["results"].reject! { |result|
+          result["scan-key"] == "PartyName"
+        }
         result.raw_result = parsed_result.to_json
       end
     end
