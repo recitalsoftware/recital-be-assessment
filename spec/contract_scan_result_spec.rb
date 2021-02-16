@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "factory_bot"
-require "./contract_scan_result"
+require "./models/contract_scan_result"
 
 FactoryBot.describe ContractScanResult do
   subject(:result) { described_class.new(raw_result: contract_scan_result.raw_result) }

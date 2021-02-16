@@ -54,12 +54,14 @@ Some links that may be helpful, should you want them:
 - `assignment.rb` runs a simulation of how this code would be called. Each
   command it runs would normally be executed as a result of an external call,
   such as a webhook or queue notification.
-- `jobs/` .. background jobs that are executed by a bcakground worker (in
+- `spec/` contains unit tests.
+- `jobs/` are the background jobs that are executed by a background worker (in
   Recital, that's Sidekiq)
   - `jobs/asdf.rb` file description
-- `models/contract_scan_result.rb` - scan result TODO
+- `models/contract_scan_result.rb` is the parsing of the result of scanning the
+  contract.
 - `services/` business logic
-  `services/asdf.rb` file description
+  - `services/asdf.rb` file description
 
 ## Tasks
 
