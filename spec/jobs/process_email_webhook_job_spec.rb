@@ -1,22 +1,37 @@
 # frozen_string_literal: true
 
 require "./spec/spec_helper"
+require "./spec/spec_helper"
 require "./jobs/process_email_webhook_job"
 
 RSpec.describe ProcessEmailWebhookJob do
-  let(:attachment) { FactoryBot.build(:message) }
+  let(:message) { FactoryBot.build(:email) }
 
-  subject(:result) do
-    described_class.perform(message)
+  before do
+    # This mocks out the call. Normally we'd do a more integration test, but
+    # here the full class is mocked out for the assessment. So, by adding this
+    # mock, we get the ability to check that it was run as an expectation below.
+    allow(CreateAttachmentScanService).to receive(:run)
   end
 
-  it "does not cache the message by default"
-  it "scans the attachment"
+  it "does not cache the message by default" do
+    expect { described_class.perform(message) }.not_to change { Email.count }
+  end
+
+  it "scans the attachment" do
+    described_class.perform(message)
+    expect(CreateAttachmentScanService).to have_received(:run).once.with(
+      message.attachments.first
+    )
+  end
 
   context "when the conversation is already cached" do
     before do
-      attachment.conversation_id = FactoryBot.create(:conversation)
+      message.conversation_id = FactoryBot.create(:conversation)
     end
-    it "caches the email"
+
+    it "caches the email" do
+      expect { described_class.perform(message) }.to change { Email.count }.by(1)
+    end
   end
 end
