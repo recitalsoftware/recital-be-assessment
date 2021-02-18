@@ -1,10 +1,11 @@
 require "json"
+require "./db/models"
 
 FactoryBot.define do
-  factory :message do
+  factory :email do
     id { rand(1000) }
-    conversatiion_id { rand(1000) }
-    attachments { [attachment] }
+    conversation_id { rand(1000) }
+    attachments { [FactoryBot.build(:attachment)] }
   end
   factory :attachment do
     id { rand(1000) }
