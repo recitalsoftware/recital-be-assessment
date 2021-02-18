@@ -72,6 +72,9 @@ Some links that may be helpful, should you want them:
   command it runs would normally be executed as a result of an external call,
   such as a webhook or queue notification.
 - `spec/` contains unit tests.
+  - `spec/factories.rb` contains elements to construct fake data for testing.
+    **Read this file for an example of the contract scan data format that you
+    will be interpreting as part of the assessment.**
 - `jobs/` are the background jobs that are executed by a background worker (in
   Recital, that's Sidekiq)
   - `jobs/process_email_webhook_job.rb` is, in the real app, a webhook that
@@ -120,6 +123,9 @@ need. However, that's probably impossible to do fully, so the following flexibil
 helpful:
 
 - You do _not_ need to implement for performance
+- You do _not_ need a ruby solution. If you can't figure something out, write
+  comment with pseudocode and we can talk through and/or write it together
+  during the in-person assessment.
 
 ### Requirements
 

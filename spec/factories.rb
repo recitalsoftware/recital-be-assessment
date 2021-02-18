@@ -1,6 +1,14 @@
 require "json"
 
 FactoryBot.define do
+  factory :message do
+    id { rand(1000) }
+    conversatiion_id { rand(1000) }
+    attachments { [attachment] }
+  end
+  factory :attachment do
+    id { rand(1000) }
+  end
   factory :contract_scan_result do
     raw_result do
       <<-CONTRACT_SCAN_RESULT
