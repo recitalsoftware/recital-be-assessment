@@ -14,6 +14,7 @@ gem "sqlite3"
 # Tests
 gem "rspec"
 gem "factory_bot"
+gem "simplecov", require: false
 
 # Static analysis
 gem "rubocop", require: false
