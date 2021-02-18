@@ -74,11 +74,21 @@ Some links that may be helpful, should you want them:
 - `spec/` contains unit tests.
 - `jobs/` are the background jobs that are executed by a background worker (in
   Recital, that's Sidekiq)
-  - `jobs/asdf.rb` file description
+  - `jobs/process_email_webhook_job.rb` is, in the real app, a webhook that
+    notifies the app that one of our users has received a new email.
+  - `jobs/process_contract_scan_result_job.rb` would be triggered after the
+    attachment's contents have been successfully scanned.
 - `models/contract_scan_result.rb` is the parsing of the result of scanning the
   contract.
-- `services/` business logic
-  - `services/asdf.rb` file description
+- `services/` contains all the business logic. Directionally, all businesss
+  logic is being migrated here - so, in future, files in `jobs/` will just be
+  thin wrappers around services.
+  - `services/create_attachment_scan_service.rb` takes an attachment and would
+    normally trigger the job. To avoid external dependencies, this file is
+    empty/mocked out in this assessment code base.
+  - `services/upload_email_attachments_for_scan_service.rb` takes in a message
+    and triggers an attachment scan for each. Its name isn't quite right and
+    should probably be renamed.
 
 ## Tasks
 
@@ -110,13 +120,11 @@ need. However, that's probably impossible to do fully, so the following flexibil
 helpful:
 
 - You do _not_ need to implement for performance
-- You do _not_ need to worry about tests. We are considering using them for a later version of this
-  assessment, but for now they would be too much work.
 
 ### Requirements
 
-1. Meets task goals outlined in the assignment text
+1. Meets task goals outlined in the assignment text (sent separately)
 1. Passes tests (`bundle exec rspec`)
-1. Passes rubocop (`bundle exec rubocop .`)
+1. Passes rubocop (`bundle exec rubocop`)
 1. Rubocop not manually disabled unless good justification is provided
 1. Commited to git: one commit per bugfix, one commit for the feature
