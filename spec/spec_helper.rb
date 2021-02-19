@@ -1,6 +1,7 @@
 require "simplecov"
 SimpleCov.start
 
+require "database_cleaner/active_record"
 require "factory_bot"
 require "./db/connect"
 
@@ -20,10 +21,22 @@ require "./db/connect"
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  # Fixtures to create data for testing
   config.include FactoryBot::Syntax::Methods
 
   config.before(:suite) do
     FactoryBot.find_definitions
+  end
+
+  # Reset database between runs
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+  end
+
+  config.around(:each) do |example|
+    DatabaseCleaner.cleaning do
+      example.run
+    end
   end
 
   # rspec-expectations config goes here. You can use an alternate

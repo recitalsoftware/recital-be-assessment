@@ -13,6 +13,7 @@ gem "sqlite3"
 
 # Tests
 gem "rspec"
+gem "database_cleaner-active_record"
 gem "factory_bot"
 gem "simplecov", require: false
 
