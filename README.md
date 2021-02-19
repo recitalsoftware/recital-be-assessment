@@ -81,8 +81,11 @@ Some links that may be helpful, should you want them:
     notifies the app that one of our users has received a new email.
   - `jobs/process_contract_scan_result_job.rb` would be triggered after the
     attachment's contents have been successfully scanned.
-- `models/contract_scan_result.rb` is the parsing of the result of scanning the
+- `models/` contains our model classes:
+  - `models/contract_scan_result.rb` is the parsing of the result of scanning the
   contract.
+  - `modesl/db.rb` contains the database-backed models that the code
+    creates/reads.
 - `services/` contains all the business logic. Directionally, all businesss
   logic is being migrated here - so, in future, files in `jobs/` will just be
   thin wrappers around services.
@@ -92,6 +95,8 @@ Some links that may be helpful, should you want them:
   - `services/upload_email_attachments_for_scan_service.rb` takes in a message
     and triggers an attachment scan for each. Its name isn't quite right and
     should probably be renamed.
+- `db/` contains the database setup and connection code. No modifications should
+  be necessary to this folder
 
 ## Tasks
 

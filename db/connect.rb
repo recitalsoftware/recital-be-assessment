@@ -5,4 +5,4 @@ ActiveRecord::Base.establish_connection(
   database: "db/sqlite.db",
 )
 
-require "./db/models"
+require "./models/db"

@@ -14,8 +14,8 @@ class ProcessContractScanResultJob
     Attachment.create!(
       external_id: attachment.id,
       email: Email.create!(
-        external_id: attachment.email.id,
-        conversation: Conversation.create!(external_id: attachment.email.conversation_id),
+        external_id: attachment.message.id,
+        conversation: Conversation.create!(external_id: attachment.message.conversation_id),
       ),
     )
   end

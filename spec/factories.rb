@@ -1,5 +1,5 @@
 require "json"
-require "./db/models"
+require "./models/db"
 
 FactoryBot.define do
   factory :email do

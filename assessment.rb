@@ -1,9 +1,7 @@
 require "./jobs/process_email_webhook_job"
 require "./jobs/process_contract_scan_result_job"
 
-# an easy way to create fake data for the contract scan result
-require "factory_bot"
-require "./spec/factories"
+require "./models/email_provider"
 
 # This file isn't needed for anything, it's just here to he;p give context on
 # how the project works in real life. You do not need to run or modify this
@@ -17,13 +15,20 @@ require "./spec/factories"
 # ------------------------------
 
 # This would actually be data fetched from their email
-# Fake data is usually generated using FactoryBot (see spec/factories.rb), but
-# we wanted to conveniently show you the data structure
-message = OpenStruct.new({
+# Yes, the class provided is called Message instead of Email. Recital uses
+# Email as a term internally instead of Message because in future it's likely
+# that we'll connect to other message types, e.g. Slack, Teams.
+attachment = EmailProvider::Attachment.new({
+  id: 5,
+})
+
+message = EmailProvider::Message.new({
   id: 10,
   conversation_id: 3,
-  attachments: [OpenStruct.new({ id: 5 })],
+  attachments: [attachment],
 })
+
+attachment.message = message
 
 ProcessEmailWebhookJob.perform(message)
 
@@ -32,11 +37,6 @@ ProcessEmailWebhookJob.perform(message)
 
 # STEP 2: Notification that contract scan is complete
 # ---------------------------------------------------
-
-attachment = OpenStruct.new({
-  id: message.attachments.first.id,
-  message: message,
-})
 
 scan_result = <<-CONTRACT_SCAN_RESULT
     {
