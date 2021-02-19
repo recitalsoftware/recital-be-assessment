@@ -3,19 +3,15 @@ require "./db/models"
 
 FactoryBot.define do
   factory :email do
-    id { rand(1000) }
     conversation
     # You shouldn't need it, but docs are here:
     # https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md#inline-definitioninstance
     attachments { [association(:attachment, email: instance)] }
   end
   factory :attachment do
-    id { rand(1000) }
     email
   end
-  factory :conversation do
-    id { rand(1000) }
-  end
+  factory :conversation
   factory :contract_scan_result do
     raw_result do
       <<-CONTRACT_SCAN_RESULT
