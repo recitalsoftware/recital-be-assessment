@@ -13688,6 +13688,11 @@ module Conversation::GeneratedAttributeMethods
   extend ::Mutex_m
 end
 
+class CreateAttachmentScanService
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
 class DRb::DRbArray
   def _dump(lv); end
 end
@@ -17375,6 +17380,16 @@ module Process
   def self.fork(); end
 end
 
+class ProcessContractScanResultJob
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
+class ProcessEmailWebhookJob
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
 class ProgressBar::Components::Bar
   DEFAULT_PROGRESS_MARK = ::T.let(nil, ::T.untyped)
   DEFAULT_REMAINDER_MARK = ::T.let(nil, ::T.untyped)
@@ -18344,11 +18359,14 @@ module RuboCop::AST::NodePattern::Sets
   SET_10_10 = ::T.let(nil, ::T.untyped)
   SET_1_1 = ::T.let(nil, ::T.untyped)
   SET_1_2 = ::T.let(nil, ::T.untyped)
+  SET_ABSTRACT_OVERRIDE_OVERRIDABLE_ETC = ::T.let(nil, ::T.untyped)
   SET_ADD_DEPENDENCY_ADD_RUNTIME_DEPENDENCY_ADD_DEVELOPMENT_DEPENDENCY = ::T.let(nil, ::T.untyped)
   SET_AFTER_ACTION_APPEND_AFTER_ACTION_APPEND_AROUND_ACTION_ETC = ::T.let(nil, ::T.untyped)
   SET_ALL_CONTEXT = ::T.let(nil, ::T.untyped)
   SET_AND_RETURN_AND_RAISE_AND_THROW_ETC = ::T.let(nil, ::T.untyped)
+  SET_ANY_ALL_NORETURN_ETC = ::T.let(nil, ::T.untyped)
   SET_AP_P_PP_ETC = ::T.let(nil, ::T.untyped)
+  SET_ATTR_READER_ATTR_WRITER_ATTR_ACCESSOR = ::T.let(nil, ::T.untyped)
   SET_ATTR_READER_ATTR_WRITER_ATTR_ACCESSOR_ATTR = ::T.let(nil, ::T.untyped)
   SET_BACKGROUND_SCENARIO_XSCENARIO_ETC = ::T.let(nil, ::T.untyped)
   SET_BEFORE_AFTER = ::T.let(nil, ::T.untyped)
@@ -18364,6 +18382,7 @@ module RuboCop::AST::NodePattern::Sets
   SET_CLASS_EVAL_MODULE_EVAL = ::T.let(nil, ::T.untyped)
   SET_CLASS_MODULE = ::T.let(nil, ::T.untyped)
   SET_CLASS_MODULE_STRUCT = ::T.let(nil, ::T.untyped)
+  SET_CONSTANTIZE_CONSTANTS_CONST_GET = ::T.let(nil, ::T.untyped)
   SET_CONTEXT_SHARED_CONTEXT = ::T.let(nil, ::T.untyped)
   SET_COUNT_LENGTH_SIZE = ::T.let(nil, ::T.untyped)
   SET_CREATED_AT_UPDATED_AT = ::T.let(nil, ::T.untyped)
@@ -18417,6 +18436,7 @@ module RuboCop::AST::NodePattern::Sets
   SET_PRIVATE_PROTECTED = ::T.let(nil, ::T.untyped)
   SET_PRIVATE_PROTECTED_PUBLIC = ::T.let(nil, ::T.untyped)
   SET_PROC_LAMBDA = ::T.let(nil, ::T.untyped)
+  SET_PROP_CONST = ::T.let(nil, ::T.untyped)
   SET_PUBLIC_CONSTANT_PRIVATE_CONSTANT = ::T.let(nil, ::T.untyped)
   SET_PUBLIC_PROTECTED_PRIVATE_MODULE_FUNCTION = ::T.let(nil, ::T.untyped)
   SET_RAISE_ERROR_RAISE_EXCEPTION = ::T.let(nil, ::T.untyped)
@@ -18453,6 +18473,7 @@ module RuboCop::AST::NodePattern::Sets
   SET_TRANSLATE_LOCALIZE = ::T.let(nil, ::T.untyped)
   SET_TRUE_FALSE = ::T.let(nil, ::T.untyped)
   SET_TRY_TRY = ::T.let(nil, ::T.untyped)
+  SET_TYPE_TEMPLATE_TYPE_MEMBER = ::T.let(nil, ::T.untyped)
   SET_UNIQ_DISTINCT = ::T.let(nil, ::T.untyped)
   SET_ZERO_POSITIVE_NEGATIVE = ::T.let(nil, ::T.untyped)
   SET__ = ::T.let(nil, ::T.untyped)
@@ -20955,6 +20976,35 @@ class RuboCop::Cop::Severity
   NAMES = ::T.let(nil, ::T.untyped)
 end
 
+class RuboCop::Cop::Sorbet::EnforceSigilOrder
+  CODING_REGEX = ::T.let(nil, ::T.untyped)
+  FROZEN_REGEX = ::T.let(nil, ::T.untyped)
+  INDENT_REGEX = ::T.let(nil, ::T.untyped)
+  MAGIC_REGEX = ::T.let(nil, ::T.untyped)
+  PREFERRED_ORDER = ::T.let(nil, ::T.untyped)
+end
+
+class RuboCop::Cop::Sorbet::ForbidIncludeConstLiteral
+  MSG = ::T.let(nil, ::T.untyped)
+end
+
+class RuboCop::Cop::Sorbet::ForbidSuperclassConstLiteral
+  MSG = ::T.let(nil, ::T.untyped)
+end
+
+class RuboCop::Cop::Sorbet::ForbidUntypedStructProps
+  MSG = ::T.let(nil, ::T.untyped)
+end
+
+class RuboCop::Cop::Sorbet::SignatureBuildOrder
+  ORDER = ::T.let(nil, ::T.untyped)
+end
+
+class RuboCop::Cop::Sorbet::ValidSigil
+  SIGIL_REGEX = ::T.let(nil, ::T.untyped)
+  STRICTNESS_LEVELS = ::T.let(nil, ::T.untyped)
+end
+
 module RuboCop::Cop::SpaceAfterPunctuation
   MSG = ::T.let(nil, ::T.untyped)
 end
@@ -22149,6 +22199,11 @@ class RuboCop::Runner
   MAX_ITERATIONS = ::T.let(nil, ::T.untyped)
 end
 
+module RuboCop::Sorbet
+  CONFIG = ::T.let(nil, ::T.untyped)
+  VERSION = ::T.let(nil, ::T.untyped)
+end
+
 class RuboCop::TargetFinder
   HIDDEN_PATH_SUBSTRING = ::T.let(nil, ::T.untyped)
 end
@@ -22867,6 +22922,11 @@ module UnicodeNormalize
 end
 
 module UnicodeNormalize
+end
+
+class UploadEmailAttachmentsForScanService
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
 end
 
 module Warning

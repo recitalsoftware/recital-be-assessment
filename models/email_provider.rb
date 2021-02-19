@@ -19,7 +19,7 @@ module EmailProvider
   class Attachment
     attr_accessor :id, :message
 
-    def initialize(id:, message:)
+    def initialize(id:, message: nil)
       @id = id
       @message = message
     end

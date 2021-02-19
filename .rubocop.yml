@@ -5,6 +5,7 @@
 require:
   - rubocop-airbnb
   - rubocop-rspec
+  - rubocop-sorbet
 
 AllCops:
   NewCops: enable

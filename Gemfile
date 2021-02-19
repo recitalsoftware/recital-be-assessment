@@ -5,6 +5,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 gem "sorbet"
+gem "sorbet-runtime"
 
 # Basic ruby helpers, should you want them
 gem "activesupport"
@@ -25,3 +26,4 @@ gem "rubocop-airbnb", github: "recitalsoftware/ruby",
                       glob: "rubocop-airbnb/rubocop-airbnb.gemspec",
                       require: false
 gem "rubocop-rspec", require: false
+gem "rubocop-sorbet", require: false

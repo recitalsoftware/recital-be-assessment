@@ -3527,8 +3527,8 @@
 # wrong constant name /
 # wrong constant name <=>
 # uninitialized constant ActiveSupport::Duration::Scalar::EXABYTE
-# Did you mean?  ActiveSupport::Duration::Scalar::MEGABYTE
-#                ActiveSupport::Duration::Scalar::TERABYTE
+# Did you mean?  ActiveSupport::Duration::Scalar::TERABYTE
+#                ActiveSupport::Duration::Scalar::MEGABYTE
 # uninitialized constant ActiveSupport::Duration::Scalar::GIGABYTE
 # uninitialized constant ActiveSupport::Duration::Scalar::KILOBYTE
 # uninitialized constant ActiveSupport::Duration::Scalar::MEGABYTE
@@ -3536,8 +3536,8 @@
 # uninitialized constant ActiveSupport::Duration::Scalar::PETABYTE
 # Did you mean?  ActiveSupport::Duration::Scalar::TERABYTE
 # uninitialized constant ActiveSupport::Duration::Scalar::TERABYTE
-# Did you mean?  ActiveSupport::Duration::Scalar::EXABYTE
-#                ActiveSupport::Duration::Scalar::PETABYTE
+# Did you mean?  ActiveSupport::Duration::Scalar::PETABYTE
+#                ActiveSupport::Duration::Scalar::EXABYTE
 # wrong constant name coerce
 # wrong constant name initialize
 # wrong constant name to_f
@@ -4933,8 +4933,8 @@
 # wrong constant name initialize
 # wrong constant name to_a
 # uninitialized constant BigDecimal::EXABYTE
-# Did you mean?  BigDecimal::MEGABYTE
-#                BigDecimal::TERABYTE
+# Did you mean?  BigDecimal::TERABYTE
+#                BigDecimal::MEGABYTE
 # uninitialized constant BigDecimal::GIGABYTE
 # uninitialized constant BigDecimal::KILOBYTE
 # uninitialized constant BigDecimal::MEGABYTE
@@ -4942,8 +4942,8 @@
 # uninitialized constant BigDecimal::PETABYTE
 # Did you mean?  BigDecimal::TERABYTE
 # uninitialized constant BigDecimal::TERABYTE
-# Did you mean?  BigDecimal::EXABYTE
-#                BigDecimal::PETABYTE
+# Did you mean?  BigDecimal::PETABYTE
+#                BigDecimal::EXABYTE
 # wrong constant name clone
 # wrong constant name to_digits
 # wrong constant name interpret_loosely
@@ -6741,8 +6741,8 @@
 # wrong constant name since
 # wrong constant name to_default_s
 # uninitialized constant Date::Infinity::EXABYTE
-# Did you mean?  Date::Infinity::MEGABYTE
-#                Date::Infinity::TERABYTE
+# Did you mean?  Date::Infinity::TERABYTE
+#                Date::Infinity::MEGABYTE
 # uninitialized constant Date::Infinity::GIGABYTE
 # uninitialized constant Date::Infinity::KILOBYTE
 # uninitialized constant Date::Infinity::MEGABYTE
@@ -6750,8 +6750,8 @@
 # uninitialized constant Date::Infinity::PETABYTE
 # Did you mean?  Date::Infinity::TERABYTE
 # uninitialized constant Date::Infinity::TERABYTE
-# Did you mean?  Date::Infinity::EXABYTE
-#                Date::Infinity::PETABYTE
+# Did you mean?  Date::Infinity::PETABYTE
+#                Date::Infinity::EXABYTE
 # wrong constant name initialize
 # wrong constant name beginning_of_week
 # wrong constant name beginning_of_week=
@@ -7442,8 +7442,8 @@
 # uninitialized constant FileUtils::Verbose::VERSION
 # Did you mean?  FileUtils::VERSION
 # uninitialized constant Float::EXABYTE
-# Did you mean?  Float::MEGABYTE
-#                Float::TERABYTE
+# Did you mean?  Float::TERABYTE
+#                Float::MEGABYTE
 # uninitialized constant Float::GIGABYTE
 # uninitialized constant Float::KILOBYTE
 # uninitialized constant Float::MEGABYTE
@@ -7451,8 +7451,8 @@
 # uninitialized constant Float::PETABYTE
 # Did you mean?  Float::TERABYTE
 # uninitialized constant Float::TERABYTE
-# Did you mean?  Float::EXABYTE
-#                Float::PETABYTE
+# Did you mean?  Float::PETABYTE
+#                Float::EXABYTE
 # wrong constant name _compile_method
 # wrong constant name _delegator_method
 # wrong constant name _valid_method?
@@ -7950,8 +7950,8 @@
 # wrong constant name underscore
 # wrong constant name <static-init>
 # uninitialized constant Integer::EXABYTE
-# Did you mean?  Integer::MEGABYTE
-#                Integer::TERABYTE
+# Did you mean?  Integer::TERABYTE
+#                Integer::MEGABYTE
 # uninitialized constant Integer::GIGABYTE
 # uninitialized constant Integer::KILOBYTE
 # uninitialized constant Integer::MEGABYTE
@@ -7959,8 +7959,8 @@
 # uninitialized constant Integer::PETABYTE
 # Did you mean?  Integer::TERABYTE
 # uninitialized constant Integer::TERABYTE
-# Did you mean?  Integer::EXABYTE
-#                Integer::PETABYTE
+# Did you mean?  Integer::PETABYTE
+#                Integer::EXABYTE
 # wrong constant name to_bn
 # wrong constant name from_state
 # wrong constant name initialize
@@ -9798,6 +9798,21 @@
 # uninitialized constant RuboCop::Cop::Security::MarshalLoad::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Security::Open::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Security::YAMLLoad::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Sorbet::EnforceSigilOrder::BYTE_ORDER_MARK
+# uninitialized constant RuboCop::Cop::Sorbet::EnforceSigilOrder::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Sorbet::EnforceSigilOrder::RESTRICT_ON_SEND
+# uninitialized constant RuboCop::Cop::Sorbet::EnforceSigilOrder::SIGIL_REGEX
+# uninitialized constant RuboCop::Cop::Sorbet::EnforceSigilOrder::STRICTNESS_LEVELS
+# uninitialized constant RuboCop::Cop::Sorbet::ForbidIncludeConstLiteral::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Sorbet::ForbidIncludeConstLiteral::RESTRICT_ON_SEND
+# uninitialized constant RuboCop::Cop::Sorbet::ForbidSuperclassConstLiteral::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Sorbet::ForbidSuperclassConstLiteral::RESTRICT_ON_SEND
+# uninitialized constant RuboCop::Cop::Sorbet::ForbidUntypedStructProps::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Sorbet::ForbidUntypedStructProps::RESTRICT_ON_SEND
+# uninitialized constant RuboCop::Cop::Sorbet::SignatureBuildOrder::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Sorbet::SignatureBuildOrder::RESTRICT_ON_SEND
+# uninitialized constant RuboCop::Cop::Sorbet::ValidSigil::LITERAL_REGEX
+# uninitialized constant RuboCop::Cop::Sorbet::ValidSigil::RESTRICT_ON_SEND
 # uninitialized constant RuboCop::Cop::SpaceBeforePunctuation::BYTE_ORDER_MARK
 # uninitialized constant RuboCop::Cop::Style::AccessModifierDeclarations::LITERAL_REGEX
 # uninitialized constant RuboCop::Cop::Style::AccessorGrouping::BYTE_ORDER_MARK

@@ -9,3 +9,5 @@ module ActiveRecord::Generators::Migration::Rails::Generators::Migration; end
 module ActiveRecord::Persistence::ActionController::Parameters; end
 module T::CompatibilityPatches::RSpecCompatibility::MethodDoubleExtensions; end
 module T::CompatibilityPatches::RSpecCompatibility::RecorderExtensions; end
+module T::Private::Methods::MethodHooks; end
+module T::Private::Methods::SingletonMethodHooks; end

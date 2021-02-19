@@ -1,7 +1,12 @@
-# typed: true
+# typed: strict
+require "sorbet-runtime"
 require "./models/contract_scan_result"
+require "./models/email_provider"
 
 class ProcessContractScanResultJob
+  extend ::T::Sig
+
+  sig { params(result: String, attachment: EmailProvider::Attachment).void }
   def self.perform(result, attachment)
     contract_info = ContractScanResult.new(raw_result: result)
 
@@ -10,6 +15,7 @@ class ProcessContractScanResultJob
     save_detected_contract_and_cache_attachment(contract_info, attachment)
   end
 
+  sig { params(contract_info: ContractScanResult, attachment: EmailProvider::Attachment).void }
   def self.save_detected_contract_and_cache_attachment(contract_info, attachment)
     # Exclamation marks mean an error will be thrown if the operation fails
     Attachment.create!(
