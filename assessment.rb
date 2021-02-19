@@ -1,4 +1,4 @@
-# typed: false
+# typed: strict
 require "./jobs/process_email_webhook_job"
 require "./jobs/process_contract_scan_result_job"
 

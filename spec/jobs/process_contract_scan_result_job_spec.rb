@@ -6,7 +6,7 @@ require "./jobs/process_contract_scan_result_job"
 
 RSpec.describe ProcessContractScanResultJob do
   let(:result_text) { FactoryBot.build(:contract_scan_result).raw_result }
-  let(:attachment) { FactoryBot.build(:attachment) }
+  let(:attachment) { FactoryBot.build(:provider_attachment) }
 
   it "caches the attachment" do
     expect {

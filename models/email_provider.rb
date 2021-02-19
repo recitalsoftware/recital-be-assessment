@@ -9,7 +9,7 @@ module EmailProvider
   class Message
     attr_accessor :id, :conversation_id, :attachments
 
-    def initialize(id:, conversation_id:, attachments:)
+    def initialize(id: nil, conversation_id: nil, attachments: nil)
       @id = id
       @conversation_id = conversation_id
       @attachments = attachments
@@ -19,7 +19,7 @@ module EmailProvider
   class Attachment
     attr_accessor :id, :message
 
-    def initialize(id:, message: nil)
+    def initialize(id: nil, message: nil)
       @id = id
       @message = message
     end

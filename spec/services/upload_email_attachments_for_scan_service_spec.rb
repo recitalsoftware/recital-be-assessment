@@ -5,8 +5,7 @@ require "./spec/spec_helper"
 require "./services/upload_email_attachments_for_scan_service"
 
 RSpec.describe UploadEmailAttachmentsForScanService do
-  # Yeah we really should unify the terminology, eh?
-  let(:message) { FactoryBot.build(:email) }
+  let(:message) { FactoryBot.build(:provider_message) }
 
   before do
     # This mocks out the call. Normally we'd do a more integration test, but

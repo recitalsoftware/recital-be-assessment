@@ -6,7 +6,7 @@ require "./spec/spec_helper"
 require "./jobs/process_email_webhook_job"
 
 RSpec.describe ProcessEmailWebhookJob do
-  let(:message) { FactoryBot.build(:email) }
+  let(:message) { FactoryBot.build(:provider_message) }
 
   before do
     # This mocks out the call. Normally we'd do a more integration test, but
@@ -27,8 +27,10 @@ RSpec.describe ProcessEmailWebhookJob do
   end
 
   context "when the conversation is already cached" do
+    let(:cached_convo) { FactoryBot.create(:conversation) }
+
     before do
-      message.conversation_id = FactoryBot.create(:conversation)
+      message.conversation_id = cached_convo.external_id
     end
 
     it "caches the email" do

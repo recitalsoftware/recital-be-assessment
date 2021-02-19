@@ -1,8 +1,16 @@
 # typed: false
 require "json"
 require "./models/db"
+require "./models/email_provider"
 
 FactoryBot.define do
+  factory :provider_message, class: EmailProvider::Message do
+    attachments { [association(:provider_attachment, message: instance)] }
+  end
+  factory :provider_attachment, class: EmailProvider::Attachment do
+    association :message, factory: :provider_message
+  end
+
   factory :email do
     conversation
     # You shouldn't need it, but docs are here:
@@ -12,7 +20,9 @@ FactoryBot.define do
   factory :attachment do
     email
   end
-  factory :conversation
+  factory :conversation do
+    sequence(:external_id)
+  end
   factory :contract_scan_result do
     raw_result do
       <<-CONTRACT_SCAN_RESULT
