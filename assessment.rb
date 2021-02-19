@@ -4,6 +4,10 @@ require "./jobs/process_contract_scan_result_job"
 
 require "./models/email_provider"
 
+# Don't use runtime checking so that candidate don't have to learn or use sorbet
+require "sorbet-runtime"
+T::Configuration.default_checked_level = :never
+
 # This file can only be run directly (necessary so sorbet doesn't execute this
 # file)
 return unless __FILE__ == $PROGRAM_NAME

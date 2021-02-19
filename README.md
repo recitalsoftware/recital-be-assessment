@@ -133,7 +133,9 @@ can simply modify existing code or copy/paste an existing block of code to accom
 need. However, that's probably impossible to do fully, so the following flexibility might be
 helpful:
 
-- You do _not_ need to do use or modify type checking or sorbet.
+- You do _not_ need to do use or modify type checking or sorbet. Passing static
+  type checking is not required or marked, and runtime type checking is
+  explicitly disabled.
 - You do _not_ need to implement for performance
 - You do _not_ need a ruby solution. If you can't figure something out, write
   comment with pseudocode and we can talk through and/or write it together
