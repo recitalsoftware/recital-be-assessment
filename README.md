@@ -71,6 +71,7 @@ Some links that may be helpful, should you want them:
   ActiveRecord](https://www.devdungeon.com/content/ruby-activerecord-without-rails-tutorial)
 - [Full ActiveRecord
   docs](https://guides.rubyonrails.org/active_record_basics.html)
+- [Sorbet docs](https://sorbet.org/docs/sigs)
 
 ## About the Code
 
