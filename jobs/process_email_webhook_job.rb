@@ -1,3 +1,4 @@
+# typed: true
 # This file is the code that executes when Recital receives (via a webhook) a
 # notification of a new email to process.
 

@@ -1,3 +1,4 @@
+# typed: strict
 # The auto-created attributes come from database inspection by ActiveRecord. You
 # can see them in db/create.rb
 

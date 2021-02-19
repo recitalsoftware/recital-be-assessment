@@ -4,6 +4,8 @@ source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
+gem "sorbet"
+
 # Basic ruby helpers, should you want them
 gem "activesupport"
 

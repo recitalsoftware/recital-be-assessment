@@ -1,3 +1,4 @@
+# typed: true
 require "./models/contract_scan_result"
 
 class ProcessContractScanResultJob

@@ -1,3 +1,4 @@
+# typed: true
 class CreateAttachmentScanService
   def self.run(attachment)
     # Intentionally blank - this would be the logic that kicks off the scan

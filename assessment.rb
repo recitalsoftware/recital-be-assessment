@@ -1,7 +1,12 @@
+# typed: false
 require "./jobs/process_email_webhook_job"
 require "./jobs/process_contract_scan_result_job"
 
 require "./models/email_provider"
+
+# This file can only be run directly (necessary so sorbet doesn't execute this
+# file)
+return unless __FILE__ == $PROGRAM_NAME
 
 # This file isn't needed for anything, it's just here to he;p give context on
 # how the project works in real life. You do not need to run or modify this

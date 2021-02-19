@@ -1,3 +1,4 @@
+# typed: true
 # No need to run this yourself unless you want to re-create the database from
 # scratch. In that case, delete db/sqlite.db then run:
 # `bundle exec ruby db/create.rb`

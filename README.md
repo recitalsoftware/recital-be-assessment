@@ -55,9 +55,15 @@ from Recital's backend project repository.
 ## About The Tech Stack
 
 This tech stack is a simplified excerpt from the Recital Backend project, with
-Rails, Sorbet, and many other things stripped out. There's a basic database that
+Rails and many other things stripped out. There's a basic database that
 is there mostly because the application logic includes bits that rely on
 persisted data.
+
+Recital uses type checking with Sorbet, and that is included here because it is
+otherwise too confusing to tell the difference between objects that are internal
+vs retrieved from an external provider. Sorbet is both gradual and optional -
+you do not need to work with it at all for this assignment, and Sorbet changes
+will not be part of our marking of your solution.
 
 Some links that may be helpful, should you want them:
 
@@ -127,6 +133,7 @@ can simply modify existing code or copy/paste an existing block of code to accom
 need. However, that's probably impossible to do fully, so the following flexibility might be
 helpful:
 
+- You do _not_ need to do use or modify type checking or sorbet.
 - You do _not_ need to implement for performance
 - You do _not_ need a ruby solution. If you can't figure something out, write
   comment with pseudocode and we can talk through and/or write it together
