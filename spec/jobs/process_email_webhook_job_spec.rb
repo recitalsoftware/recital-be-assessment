@@ -2,7 +2,6 @@
 # frozen_string_literal: true
 
 require "./spec/spec_helper"
-require "./spec/spec_helper"
 require "./jobs/process_email_webhook_job"
 
 RSpec.describe ProcessEmailWebhookJob do
