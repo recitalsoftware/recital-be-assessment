@@ -1,5 +1,9 @@
 # Recital Project
 
+> This branch of the assessment removes sorbet for Windows support. The type
+> checking may still be helpful for understanding which objects are where, so
+> feel free to browse the source of the main branch for clarity.
+
 Hello, and thanks for your interest in joining Recital. We're excited to have others join our team,
 and aim to build a truly excellent group. We've put significant thought into this assessment because
 we want to ensure we hire the best team while also being respectful to you and your time.

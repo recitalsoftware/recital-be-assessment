@@ -86,8 +86,6 @@ GEM
     rubocop-rspec (2.2.0)
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
-    rubocop-sorbet (0.5.1)
-      rubocop
     ruby-progressbar (1.11.0)
     simplecov (0.21.2)
       docile (~> 1.1)
@@ -95,10 +93,6 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.2)
-    sorbet (0.5.6293)
-      sorbet-static (= 0.5.6293)
-    sorbet-runtime (0.5.6293)
-    sorbet-static (0.5.6293-universal-darwin-19)
     sqlite3 (1.4.2)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
@@ -118,10 +112,7 @@ DEPENDENCIES
   rubocop
   rubocop-airbnb!
   rubocop-rspec
-  rubocop-sorbet
   simplecov
-  sorbet
-  sorbet-runtime
   sqlite3
 
 BUNDLED WITH

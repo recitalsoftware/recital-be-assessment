@@ -1,10 +1,6 @@
 # typed: strict
 require "pry"
 
-# Don't use runtime checking so that candidate don't have to learn or use sorbet
-require "sorbet-runtime"
-T::Configuration.default_checked_level = :never
-
 require "./jobs/process_email_webhook_job"
 require "./jobs/process_contract_scan_result_job"
 
