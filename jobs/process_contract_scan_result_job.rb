@@ -15,7 +15,10 @@ class ProcessContractScanResultJob
     save_detected_contract_and_cache_attachment(contract_info, attachment)
   end
 
-  sig { params(contract_info: ContractScanResult, attachment: EmailProvider::Attachment).void }
+  sig do
+    params(contract_info: ContractScanResult,
+           attachment: EmailProvider::Attachment).void
+  end
   def self.save_detected_contract_and_cache_attachment(contract_info, attachment)
     # Exclamation marks mean an error will be thrown if the operation fails
     Attachment.create!(

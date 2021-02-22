@@ -33,7 +33,9 @@ RSpec.describe ProcessEmailWebhookJob do
     end
 
     it "caches the email" do
-      expect { described_class.perform(message) }.to change { Email.count }.by(1)
+      expect { described_class.perform(message) }.to change {
+                                                       Email.count
+                                                     }.by(1)
     end
   end
 end

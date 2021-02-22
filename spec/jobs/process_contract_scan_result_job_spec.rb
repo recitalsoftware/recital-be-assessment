@@ -9,64 +9,68 @@ RSpec.describe ProcessContractScanResultJob do
   let(:attachment) { FactoryBot.build(:provider_attachment) }
 
   it "caches the attachment" do
-    expect {
+    expect do
       described_class.perform(result_text, attachment)
-    }.to change { Attachment.count }.by(1)
+    end.to change { Attachment.count }.by(1)
   end
 
   it "caches the email" do
-    expect {
+    expect do
       described_class.perform(result_text, attachment)
-    }.to change { Email.count }.by(1)
+    end.to change { Email.count }.by(1)
   end
 
   it "caches the conversation" do
-    expect {
+    expect do
       described_class.perform(result_text, attachment)
-    }.to change { Conversation.count }.by(1)
+    end.to change { Conversation.count }.by(1)
   end
 
   context "when no type is detected" do
-    let(:result_text) { FactoryBot.build(:contract_scan_result, :no_contract_type).raw_result }
+    let(:result_text) do
+      FactoryBot.build(:contract_scan_result, :no_contract_type).raw_result
+    end
 
     it "caches the attachment" do
-      expect {
+      expect do
         described_class.perform(result_text, attachment)
-      }.to change { Attachment.count }.by(1)
+      end.to change { Attachment.count }.by(1)
     end
 
     it "caches the email" do
-      expect {
+      expect do
         described_class.perform(result_text, attachment)
-      }.to change { Email.count }.by(1)
+      end.to change { Email.count }.by(1)
     end
 
     it "caches the conversation" do
-      expect {
+      expect do
         described_class.perform(result_text, attachment)
-      }.to change { Conversation.count }.by(1)
+      end.to change { Conversation.count }.by(1)
     end
   end
 
   context "when no parties are detected" do
-    let(:result_text) { FactoryBot.build(:contract_scan_result, :no_parties).raw_result }
+    let(:result_text) do
+      FactoryBot.build(:contract_scan_result, :no_parties).raw_result
+    end
 
     it "does not cache the attachment" do
-      expect {
+      expect do
         described_class.perform(result_text, attachment)
-      }.not_to change { Attachment.count }
+      end.not_to change { Attachment.count }
     end
 
     it "does not cache the email" do
-      expect {
+      expect do
         described_class.perform(result_text, attachment)
-      }.not_to change { Email.count }
+      end.not_to change { Email.count }
     end
 
     it "does not cache the conversation" do
-      expect {
+      expect do
         described_class.perform(result_text, attachment)
-      }.not_to change { Conversation.count }
+      end.not_to change { Conversation.count }
     end
   end
 end

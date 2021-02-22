@@ -4,10 +4,10 @@ require "./models/db"
 require "./models/email_provider"
 
 FactoryBot.define do
-  factory :provider_message, class: EmailProvider::Message do
+  factory :provider_message, class: 'EmailProvider::Message' do
     attachments { [association(:provider_attachment, message: instance)] }
   end
-  factory :provider_attachment, class: EmailProvider::Attachment do
+  factory :provider_attachment, class: 'EmailProvider::Attachment' do
     association :message, factory: :provider_message
   end
 

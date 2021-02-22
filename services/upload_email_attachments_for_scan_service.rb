@@ -19,6 +19,6 @@ class UploadEmailAttachmentsForScanService
   def self.message_already_scanned?(message)
     # Ruby returns the value of the last command in a method, without an
     # explicit return keyword
-    Email.where(external_id: message.id).exists?
+    Email.exists?(external_id: message.id)
   end
 end

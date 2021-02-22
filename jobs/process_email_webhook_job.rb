@@ -35,6 +35,6 @@ class ProcessEmailWebhookJob
 
   sig { params(message: EmailProvider::Message).returns(T::Boolean) }
   def self.conversation_already_cached?(message)
-    Conversation.where(external_id: message.conversation_id).exists?
+    Conversation.exists?(external_id: message.conversation_id)
   end
 end
