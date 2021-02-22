@@ -148,11 +148,15 @@ health. Take care of yourself :) Take a break! Go for a walk! )
 
 ### Non-Requirements
 
-We have tried our best so that you do not need to learn anything specifically for this. As much as
-possible, everything you need to accomplish your tasks should already be in here. We hope that you
-can simply modify existing code or copy/paste an existing block of code to accomplish anything you
-need. However, that's probably impossible to do fully, so the following flexibility might be
-helpful:
+We know that you might not already know Ruby or anything else. While working at
+Recital will mean working on code written in Ruby on Rails, we know that you
+can learn this on the job, and so Ruby experience is not a job requirement.
+We have tried our best so that you do not need to learn anything specifically
+for this. As much as possible, everything you need to accomplish your tasks
+should already be in here. We hope that you can simply modify existing code
+or copy/paste an existing block of code to accomplish anything you need.
+However, that's probably impossible to do fully, so the following
+flexibility might be helpful:
 
 - You do _not_ need to do use or modify type checking or sorbet. Passing static
   type checking is not required or marked, and runtime type checking is
