@@ -4,10 +4,10 @@ require "./models/db"
 require "./models/email_provider"
 
 FactoryBot.define do
-  factory :provider_message, class: 'EmailProvider::Message' do
+  factory :provider_message, class: "EmailProvider::Message" do
     attachments { [association(:provider_attachment, message: instance)] }
   end
-  factory :provider_attachment, class: 'EmailProvider::Attachment' do
+  factory :provider_attachment, class: "EmailProvider::Attachment" do
     association :message, factory: :provider_message
   end
 
@@ -73,6 +73,27 @@ FactoryBot.define do
       after(:build) do |result|
         parsed_result = JSON.parse(result.raw_result)
         parsed_result["results"] << parsed_result["results"][1]
+        result.raw_result = parsed_result.to_json
+      end
+    end
+
+    trait :two_title_results do
+      after(:build) do |result|
+        parsed_result = JSON.parse(result.raw_result)
+        title_result = parsed_result["results"].find do |r|
+          r["scan-key"] == "ContractTitle"
+        end
+
+        title_result["score"] = title_result["score"] + 0.001
+
+        title_result["extracted-values"][0]["score"] =
+          title_result["extracted-values"][0]["score"] - 0.001
+
+        title_result["extracted-values"][0]["text"] =
+          title_result["extracted-values"][0]["normalized-value"] =
+            "Higher sentence score, lower extracted score"
+
+        parsed_result["results"] << title_result
         result.raw_result = parsed_result.to_json
       end
     end
