@@ -65,6 +65,14 @@ vs retrieved from an external provider. Sorbet is both gradual and optional -
 you do not need to work with it at all for this assignment, and Sorbet changes
 will not be part of our marking of your solution.
 
+> Tip: You can debug code during execution of assessment.rb or rspec or
+> anything else by placing `binding.pry` as a line of code wherever you want.
+> Works with conditionals!
+
+> Tip: You can append a filename and line number to your rspec command to run
+> only that test. Combines well with `binding.pry`. e.g. `bundle exec rspec
+> spec/jobs/process_email_webhook_job_spec.rb:18`
+
 Some links that may be helpful, should you want them:
 
 - [Basic intro to database access with

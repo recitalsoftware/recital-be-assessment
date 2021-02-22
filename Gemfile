@@ -4,11 +4,14 @@ source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
+# Type checking
 gem "sorbet"
 gem "sorbet-runtime"
 
 # Basic ruby helpers, should you want them
 gem "activesupport"
+# Helpful debugging capatbilities
+gem "pry-byebug"
 
 # Database
 gem "activerecord"
