@@ -65,17 +65,28 @@ vs retrieved from an external provider. Sorbet is both gradual and optional -
 you do not need to work with it at all for this assignment, and Sorbet changes
 will not be part of our marking of your solution.
 
-> Tip: You can debug code during execution of assessment.rb or rspec or
-> anything else by placing `binding.pry` as a line of code wherever you want.
-> Works with conditionals!
+### Debugging in Ruby
 
-> Tip: You can append a filename and line number to your rspec command to run
-> only that test. Combines well with `binding.pry`. e.g. `bundle exec rspec
-> spec/jobs/process_email_webhook_job_spec.rb:18`
+If you'd like line-by-line debugging, you can drop into a debug session in the
+command line by placing `binding.pry` as a line of code wherever your want. This
+works as a normal line of code, so you can use conditionals to start a debug
+session only in some situations. See the links below for commands to use in this
+interface.
+
+You can also append a filename and line number to your rspec command to run
+only that test. e.g. `bundle exec rspec
+spec/jobs/process_email_webhook_job_spec.rb:18`. When a test fails, rspec
+gives you this command format for the specific failure at the bottom of its output.
+
+**These two tricks combine well: you can put `binding.pry` in the code, and then
+run only the failing rspec test, which will immediately drop you into a debug
+session in the failing situation.**
+
+### Links
 
 Some links that may be helpful, should you want them:
 
-- [Debug commands](https://github.com/deivid-rodriguez/pry-byebug#commands)
+- [Debug commands for binding.pry](https://github.com/deivid-rodriguez/pry-byebug#commands)
 - [Basic intro to database access with
   ActiveRecord](https://www.devdungeon.com/content/ruby-activerecord-without-rails-tutorial)
 - [Full ActiveRecord
