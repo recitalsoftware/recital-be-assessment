@@ -9,6 +9,7 @@ RSpec.describe ContractScanResult do
     described_class.new(raw_result: contract_scan_result.raw_result)
   end
 
+  # See spec/factories.rb for an example of mocking
   let(:contract_scan_result) { FactoryBot.build(:contract_scan_result) }
 
   it "sets the contract type" do
@@ -21,6 +22,20 @@ RSpec.describe ContractScanResult do
 
   it "is full contract info" do
     expect(result).to be_full_contract_info
+  end
+
+  context "when contract scan returns the two possible contract titles" do
+    let(:contract_scan_result) do
+      FactoryBot.build(:contract_scan_result, :two_title_results)
+    end
+
+    it "returns the entry with higher sentence score" do
+      expect(result.type).to eq "Higher sentence score, lower extracted score"
+    end
+
+    it "is still full contract info" do
+      expect(result).to be_full_contract_info
+    end
   end
 
   context "when contract scan returns the same party twice" do
