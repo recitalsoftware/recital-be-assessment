@@ -75,6 +75,7 @@ will not be part of our marking of your solution.
 
 Some links that may be helpful, should you want them:
 
+- [Debug commands](https://github.com/deivid-rodriguez/pry-byebug#commands)
 - [Basic intro to database access with
   ActiveRecord](https://www.devdungeon.com/content/ruby-activerecord-without-rails-tutorial)
 - [Full ActiveRecord
