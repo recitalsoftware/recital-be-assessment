@@ -17,6 +17,9 @@ normal working hours: M-F 13.00-21.00 CET
 
 ## Build Setup
 
+> WARNING: This branch does not support Windows! For Windows support, use the
+> `no-sorbet` branch.
+
 ```bash
 " requires a basic database with sqlite
 $ brew install sqlite
