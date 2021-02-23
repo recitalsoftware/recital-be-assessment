@@ -80,17 +80,21 @@ FactoryBot.define do
     trait :two_title_results do
       after(:build) do |result|
         parsed_result = JSON.parse(result.raw_result)
-        title_result = parsed_result["results"].find do |r|
+        original_result = parsed_result["results"].find do |r|
           r["scan-key"] == "ContractTitle"
         end
 
+        # Otherwise the original will be modified
+        title_result = original_result.deep_dup
+
         title_result["score"] = title_result["score"] + 0.001
 
-        title_result["extracted-values"][0]["score"] =
-          title_result["extracted-values"][0]["score"] - 0.001
+        extracted_value = title_result["extracted-values"][0]
 
-        title_result["extracted-values"][0]["text"] =
-          title_result["extracted-values"][0]["normalized-value"] =
+        extracted_value["score"] = extracted_value["score"] - 0.001
+
+        extracted_value["text"] =
+          extracted_value["normalized-value"] =
             "Higher sentence score, lower extracted score"
 
         parsed_result["results"] << title_result
