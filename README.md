@@ -21,7 +21,7 @@ normal working hours: M-F 13.00-21.00 CET
 > `no-sorbet` branch.
 
 ```bash
-" requires a basic database with sqlite
+# requires a basic database with sqlite
 $ brew install sqlite
 
 # install dependencies
@@ -39,6 +39,9 @@ $ git checkout -- db/sqlite.db
 
 # But probably tests are all you need:
 $ bundle exec rspec
+
+# Run the ruby linter rubocop (See requirements at the bottom)
+$ bundle exec rubocop
 
 # Check if it this meets the lint and test requirements:
 $ bundle exec rubocop && bundle exec rspec
