@@ -145,12 +145,12 @@ To give you some idea of what to expect:
 
 ## Your Solution
 
-Please compress (zip, tar) and email your solution back within 4 hours of your start time.
+Please fork this repo, push your changes, and send us an email letting us know you're done within
+4 hours of your start time.
 (Please don't spend 4 hours on this! It should only take you 1-2. At Recital, we value mental
 health. Take care of yourself :) Take a break! Go for a walk! )
 
-> If you have any problems with the compression/email approach, just upload to github/gitlab and
-> send me the URL.
+> If you have any problems with Github or otherwise, submissions by email or cloud storage are also accepted.
 
 ### Non-Requirements
 
