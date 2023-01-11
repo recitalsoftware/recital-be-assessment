@@ -1,4 +1,5 @@
 # typed: strict
+
 require "sorbet-runtime"
 require "./db/connect"
 require "./services/create_attachment_scan_service"

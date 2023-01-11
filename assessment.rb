@@ -1,4 +1,5 @@
 # typed: strict
+
 # Don't use runtime checking so that candidate don't have to learn or use sorbet
 require "sorbet-runtime"
 T::Configuration.default_checked_level = :never

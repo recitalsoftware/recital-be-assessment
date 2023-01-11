@@ -1,4 +1,5 @@
 # typed: false
+
 require "json"
 require "./models/db"
 require "./models/email_provider"

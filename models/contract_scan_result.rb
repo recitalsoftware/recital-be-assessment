@@ -67,9 +67,9 @@ class ContractScanResult
   def party_results
     filtered_results.
       select { |r| r["scan-key"] == "PartyName" }.
-      map { |result| result["extracted-values"] }.
+      pluck("extracted-values").
       flatten.
-      map { |v| v["normalized-value"] }.
+      pluck("normalized-value").
       uniq.
       reject { |p| PARTY_NAME_BLACKLIST.include?(p.downcase) }
   end

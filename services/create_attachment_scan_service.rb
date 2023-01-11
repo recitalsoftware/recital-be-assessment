@@ -1,4 +1,5 @@
 # typed: strict
+
 require "sorbet-runtime"
 require "./models/email_provider"
 

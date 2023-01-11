@@ -1,4 +1,5 @@
 # typed: strict
+
 require "simplecov"
 SimpleCov.start
 

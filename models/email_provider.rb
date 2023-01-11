@@ -1,4 +1,5 @@
 # typed: true
+
 # In recital, these classes are actually provided by the gem that we use to
 # integrate with email providers.
 
