@@ -1,6 +1,4 @@
 # typed: strict
-require "pry"
-
 # Don't use runtime checking so that candidate don't have to learn or use sorbet
 require "sorbet-runtime"
 T::Configuration.default_checked_level = :never
@@ -29,15 +27,15 @@ return unless __FILE__ == $PROGRAM_NAME
 # Yes, the class provided is called Message instead of Email. Recital uses
 # Email as a term internally instead of Message because in future it's likely
 # that we'll connect to other message types, e.g. Slack, Teams.
-attachment = EmailProvider::Attachment.new({
+attachment = EmailProvider::Attachment.new(
   id: 5,
-})
+)
 
-message = EmailProvider::Message.new({
+message = EmailProvider::Message.new(
   id: 10,
   conversation_id: 3,
   attachments: [attachment],
-})
+)
 
 attachment.message = message
 

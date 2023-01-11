@@ -13,8 +13,8 @@ class ProcessEmailWebhookJob
   sig { params(message: EmailProvider::Message).void }
   def self.perform(message)
     # Tip: if you want step-by-step debugging, you can uncomment this line here.
-    # Docs: https://github.com/deivid-rodriguez/pry-byebug#commands
-    # binding.pry
+    # (Docs:https://github.com/ruby/debug#how-to-use)
+    # debugger
     save_to_email_cache(message) if conversation_already_cached?(message)
 
     # If there's no attachments then there's nothing to scan

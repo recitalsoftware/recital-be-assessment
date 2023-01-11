@@ -1,0 +1,14 @@
+gem:
+  exclude:
+    # Generated RBI throws an error:
+    # Malformed type declaration. Generic class without type arguments
+    - reline
+    # https://github.com/Shopify/tapioca/issues/658
+    - mini_portile2
+    # these are included in ruby 3.1, but sorbet has included conflicting
+    # signatures for them, so don't generate duplicates
+    - net-imap
+    - net-pop
+    - net-smtp
+    - net-protocol
+    - timeout

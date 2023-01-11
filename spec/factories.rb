@@ -24,6 +24,12 @@ FactoryBot.define do
     sequence(:external_id)
   end
   factory :contract_scan_result do
+    skip_create
+
+    initialize_with do
+      new(raw_result:)
+    end
+
     raw_result do
       <<-CONTRACT_SCAN_RESULT
     {

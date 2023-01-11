@@ -4,7 +4,6 @@ SimpleCov.start
 
 require "database_cleaner/active_record"
 require "factory_bot"
-require "pry"
 
 # Don't use runtime checking so that candidate don't have to learn or use sorbet
 require "sorbet-runtime"
