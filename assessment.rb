@@ -13,7 +13,7 @@ require "./models/email_provider"
 # file)
 return unless __FILE__ == $PROGRAM_NAME
 
-# This file isn't needed for anything, it's just here to he;p give context on
+# This file isn't needed for anything, it's just here to help give context on
 # how the project works in real life. You do not need to run or modify this
 # file.
 

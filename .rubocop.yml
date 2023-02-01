@@ -38,7 +38,7 @@ Style/Documentation:
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
 
-# Having a comma at the end of a list of multi-line aruments avoids extra diffs
+# Having a comma at the end of a list of multi-line arguments avoids extra diffs
 # on otherwise-untouched lines of code when adding a new item to the end
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: comma

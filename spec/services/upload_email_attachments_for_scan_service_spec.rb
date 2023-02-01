@@ -26,7 +26,7 @@ RSpec.describe UploadEmailAttachmentsForScanService do
       message.attachments << FactoryBot.build(:attachment)
     end
 
-    it "scans all attchments" do
+    it "scans all attachments" do
       described_class.run(message)
       expect(CreateAttachmentScanService).to have_received(:run).once.with(
         message.attachments.first
