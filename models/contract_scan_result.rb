@@ -4,7 +4,7 @@
 require "json"
 
 class ContractScanResult
-  # There are two scores included in the results: a sentencecore and a
+  # There are two scores included in the results: a sentence score and an
   # extraction score.
   #
   # The first score (at the sentence / phrase level, listed on each `result`
@@ -30,7 +30,7 @@ class ContractScanResult
 
   attr_accessor :raw_result
 
-  # For an exmaple of how the data looks, see spec/factories.rb
+  # For an example of how the data looks, see spec/factories.rb
   def initialize(opts)
     @raw_result = opts[:raw_result]
   end
