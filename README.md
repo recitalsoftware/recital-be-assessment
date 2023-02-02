@@ -21,6 +21,10 @@ normal working hours: M-F 13.00-21.00 CET
 > `no-sorbet` branch.
 
 ```bash
+# requires ruby 3.2 
+# You may also need to update your $PATH after the following command
+$ brew install ruby@3.2
+
 # requires a basic database with sqlite
 $ brew install sqlite
 
