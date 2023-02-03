@@ -57,6 +57,11 @@ scan_result = <<-CONTRACT_SCAN_RESULT
                         "normalized-value": "NEWCO, INC.",
                         "score": 0.7239318694472867,
                         "text": "NEWCO, INC."
+                    },
+                    {
+                        "normalized-value": "NEWCO, INC.",
+                        "score": 0.8179515724673863,
+                        "text": "NEWCO, INC."
                     }
                 ],
                 "score": 0.955939669149689,
@@ -77,6 +82,11 @@ scan_result = <<-CONTRACT_SCAN_RESULT
             },
             {
                 "extracted-values": [
+                    {
+                        "normalized-value": "Non Disclosure Agreement",
+                        "score": 0.5439318694472867,
+                        "text": "Non-Disclosure Agreement"
+                    },
                     {
                         "normalized-value": "Non-Disclosure Agreement",
                         "score": 0.6439318694472867,
