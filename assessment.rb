@@ -54,7 +54,7 @@ scan_result = <<-CONTRACT_SCAN_RESULT
             {
                 "extracted-values": [
                     {
-                        "normalized-value": "NEWCO, INC.",
+                        "normalized-value": "NEW CO, INC.",
                         "score": 0.7239318694472867,
                         "text": "NEW CO, INC."
                     },
