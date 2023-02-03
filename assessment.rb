@@ -54,14 +54,19 @@ scan_result = <<-CONTRACT_SCAN_RESULT
             {
                 "extracted-values": [
                     {
-                        "normalized-value": "NEWCO, INC.",
+                        "normalized-value": "NEW CO, INC.",
                         "score": 0.7239318694472867,
+                        "text": "NEW CO, INC."
+                    },
+                    {
+                        "normalized-value": "NEWCO, INC.",
+                        "score": 0.8179515724673863,
                         "text": "NEWCO, INC."
                     }
                 ],
                 "score": 0.955939669149689,
                 "scan-key": "PartyName",
-                "text": "BYLAWS OF NEWCO, INC. A DELAWARE CORPORATION BYLAWS OF NEWCO, INC. A DELAWARE CORPORATION OFFICES Registered Office."
+                "text": "BYLAWS OF NEWCO, INC. A DELAWARE CORPORATION BYLAWS OF NEW CO, INC. A DELAWARE CORPORATION OFFICES Registered Office."
             },
             {
                 "extracted-values": [
@@ -73,19 +78,24 @@ scan_result = <<-CONTRACT_SCAN_RESULT
                 ],
                 "score": 0.845939669149689,
                 "scan-key": "PartyName",
-                "text": "BYLAWS OF NEWCO, INC. A DELAWARE CORPORATION BYLAWS OF NEWCO, INC. A DELAWARE CORPORATION OFFICES Registered Office."
+                "text": "BYLAWS OF Second Co. A DELAWARE CORPORATION BYLAWS OF SECOND Co. A DELAWARE CORPORATION OFFICES Registered Office."
             },
             {
                 "extracted-values": [
                     {
                         "normalized-value": "Non-Disclosure Agreement",
-                        "score": 0.6439318694472867,
+                        "score": 0.5439318694472867,
                         "text": "Non-Disclosure Agreement"
+                    },
+                    {
+                        "normalized-value": "NDA",
+                        "score": 0.6439318694472867,
+                        "text": "NDA"
                     }
                 ],
                 "score": 0.955939669149689,
                 "scan-key": "ContractTitle",
-                "text": "This Non-Disclosure Agrement, together with..."
+                "text": "This Non-Disclosure Agrement [NDA], together with..."
             }
         ]
     }
