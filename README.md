@@ -41,14 +41,17 @@ $ rm db/sqlite.db && bundle exec ruby db/create.rb
 # Or just reset it from git:
 $ git checkout -- db/sqlite.db
 
-# But probably tests are all you need:
+# Run type checking:
+$ bundle exec srb tc
+
+# Run test suite:
 $ bundle exec rspec
 
 # Run the ruby linter rubocop (See requirements at the bottom)
 $ bundle exec rubocop
 
-# Check if it this meets the lint and test requirements:
-$ bundle exec rubocop && bundle exec rspec
+# Check if it this meets the type-checking, lint and test requirements:
+$ bundle exec srb sc && bundle exec rubocop && bundle exec rspec
 ```
 
 ## Product Description
@@ -179,6 +182,7 @@ flexibility might be helpful:
 ### Requirements
 
 1. Meets task goals outlined in the assignment text (sent separately)
+1. Passes type checking (`bundle exec srb tc`)
 1. Passes tests (`bundle exec rspec`)
 1. Passes rubocop (`bundle exec rubocop`)
 1. Rubocop not manually disabled unless good justification is provided
