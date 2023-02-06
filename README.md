@@ -51,7 +51,7 @@ $ bundle exec rspec
 $ bundle exec rubocop
 
 # Check if it this meets the type-checking, lint and test requirements:
-$ bundle exec srb sc && bundle exec rubocop && bundle exec rspec
+$ bundle exec srb tc && bundle exec rubocop && bundle exec rspec
 ```
 
 ## Product Description
