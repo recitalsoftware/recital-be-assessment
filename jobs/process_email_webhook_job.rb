@@ -28,6 +28,8 @@ class ProcessEmailWebhookJob
   sig { params(message: EmailProvider::Message).void }
   def self.save_to_email_cache(message)
     # Exclamation marks mean an error will be thrown if the operation fails
+    #
+    # Tip: https://api.rubyonrails.org/v6.1.0/classes/ActiveRecord/Relation.html#method-i-find_or_create_by
     Email.create!(
       external_id: message.id,
       conversation: Conversation.find_by!(external_id: message.conversation_id),
