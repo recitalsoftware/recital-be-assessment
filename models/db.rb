@@ -6,6 +6,7 @@
 class Attachment < ActiveRecord::Base
   belongs_to :email
   belongs_to :contract
+  validates :external_id, uniqueness: true
   # also has auto-created attributes:
   # email_id, contract_id, and external_id
 end
@@ -13,12 +14,14 @@ end
 class Email < ActiveRecord::Base
   belongs_to :conversation
   has_many :attachments
+  validates :external_id, uniqueness: true
   # also has auto-created attributes:
   # conversation_id and external_id
 end
 
 class Conversation < ActiveRecord::Base
   belongs_to :contract
+  validates :external_id, uniqueness: true
   # also has auto-created attributes:
   # contract_id and external_id
 end
