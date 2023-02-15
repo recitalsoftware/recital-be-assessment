@@ -7,17 +7,17 @@ require "./db/connect"
 class CreateAssessmentTables < ActiveRecord::Migration[6.1]
   def change
     create_table :attachments do |t|
-      t.reference :email_id
-      t.reference :contract_id
-      t.reference :external_id
+      t.references :email, null: false, foreign_key: true
+      t.references :contract, null: false, foreign_key: true
+      t.references :external
     end
     create_table :emails do |t|
-      t.reference :conversation_id
-      t.reference :external_id
+      t.references :conversation, null: false, foreign_key: true
+      t.references :external
     end
     create_table :conversations do |t|
-      t.reference :contract_id
-      t.reference :external_id
+      t.references :contract, null: false, foreign_key: true
+      t.references :external
     end
     create_table :contracts do |t|
       t.string :contract_type
