@@ -32,6 +32,7 @@ class ProcessContractScanResultJob
           external_id: attachment.message.conversation_id,
         ),
       ),
+      # would use contract_info here, but this is a small example code assessment
       contract: Contract.create!
     )
   end
