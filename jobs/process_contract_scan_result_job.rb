@@ -32,6 +32,7 @@ class ProcessContractScanResultJob
           external_id: attachment.message.conversation_id,
         ),
       ),
+      contract: Contract.create!
     )
   end
 end
