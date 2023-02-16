@@ -11,14 +11,20 @@ class CreateAssessmentTables < ActiveRecord::Migration[6.1]
       t.references :contract, null: false, foreign_key: true
       t.integer :external_id
     end
+    add_index :attachments, :external_id, unique: true
+
     create_table :emails do |t|
       t.references :conversation, null: false, foreign_key: true
       t.integer :external_id
     end
+    add_index :emails, :external_id, unique: true
+
     create_table :conversations do |t|
       t.references :contract, null: false, foreign_key: true
       t.integer :external_id
     end
+    add_index :conversations, :external_id, unique: true
+
     create_table :contracts do |t|
       t.string :contract_type
       t.string :parties
