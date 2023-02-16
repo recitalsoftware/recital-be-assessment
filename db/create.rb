@@ -9,15 +9,15 @@ class CreateAssessmentTables < ActiveRecord::Migration[6.1]
     create_table :attachments do |t|
       t.references :email, null: false, foreign_key: true
       t.references :contract, null: false, foreign_key: true
-      t.references :external
+      t.integer :external_id
     end
     create_table :emails do |t|
       t.references :conversation, null: false, foreign_key: true
-      t.references :external
+      t.integer :external_id
     end
     create_table :conversations do |t|
       t.references :contract, null: false, foreign_key: true
-      t.references :external
+      t.integer :external_id
     end
     create_table :contracts do |t|
       t.string :contract_type
