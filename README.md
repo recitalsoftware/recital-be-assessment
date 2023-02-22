@@ -4,8 +4,8 @@ Hello, and thanks for your interest in joining Recital. We're excited to have ot
 and aim to build a truly excellent group. We've put significant thought into this assessment because
 we want to ensure we hire the best team while also being respectful to you and your time.
 
-You should have received this code in advance, and you will receive the problem to solve by email
-at the time of your choosing. You'll have 4 hours to complete it. We send the code in advance so
+You have received this code in advance, and you will receive the problem to solve when you move on
+to the next step. You'll have 4 hours to complete it. We send the code in advance so
 you can familiarize yourself with it, should you choose. The assignment will not require you to do
 so, but working at Recital will not require you to immediately work on code you've never looked at
 before, so our assessment doesn't require that either.
@@ -17,8 +17,7 @@ normal working hours: M-F 13.00-21.00 CET
 
 ## Build Setup
 
-> WARNING: This branch does not support Windows! For Windows support, use the
-> `no-sorbet` branch.
+> WARNING: This repo does not support Windows! For Windows support, contact Brendan.
 
 ```bash
 # requires ruby 3.2 
@@ -140,8 +139,8 @@ Some links that may be helpful, should you want them:
 
 ## Tasks
 
-You will fix a bug, and then add a feature. These will be emailed to you at the start of your
-scheduled time. The bugs and features are based on real tasks, though obviously are intentionally
+You will fix a bug, and then add a feature. These will be shared once you move on to the next
+step. The bugs and features are based on real tasks, though obviously are intentionally
 simple to fit in a small time budget.
 
 To give you some idea of what to expect:
@@ -152,12 +151,10 @@ To give you some idea of what to expect:
 
 ## Your Solution
 
-Please fork this repo, push your changes, and send us an email letting us know you're done within
-4 hours of your start time.
+Please push your work to the dev branch of this repo, then make a pull request between dev and main.
+
 (Please don't spend 4 hours on this! It should only take you 1-2. At Recital, we value mental
 health. Take care of yourself :) Take a break! Go for a walk! )
-
-> If you have any problems with Github or otherwise, submissions by email or cloud storage are also accepted.
 
 ### Non-Requirements
 
