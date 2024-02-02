@@ -13,7 +13,7 @@ gem "debug"
 gem "sorbet"
 gem "sorbet-runtime"
 
-gem 'tapioca', require: false
+gem "tapioca", require: false
 
 # Basic ruby helpers, should you want them
 gem "activesupport"
@@ -30,8 +30,11 @@ gem "simplecov", require: false
 
 # Static analysis
 gem "rubocop", require: false
-gem "rubocop-airbnb", github: "recitalsoftware/ruby",
-                      glob: "rubocop-airbnb/rubocop-airbnb.gemspec",
-                      require: false
+gem(
+  "rubocop-airbnb",
+  github: "recitalsoftware/ruby",
+  glob: "rubocop-airbnb/rubocop-airbnb.gemspec",
+  require: false
+)
 gem "rubocop-rspec", require: false
 gem "rubocop-sorbet", require: false
