@@ -20,9 +20,9 @@ normal working hours: M-F 13.00-21.00 CET
 > WARNING: This repo does not support Windows! For Windows support, contact Brendan.
 
 ```bash
-# requires ruby 3.2 
+# requires ruby 3.3
 # You may also need to update your $PATH after the following command
-$ brew install ruby@3.2
+$ brew install ruby@3.3
 
 # requires a basic database with sqlite
 $ brew install sqlite
