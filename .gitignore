@@ -5,3 +5,6 @@ submissions/
 assignment.md
 evaluation.md
 emails.md
+
+db/sqlite.db-shm
+db/sqlite.db-wal
