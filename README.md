@@ -144,6 +144,16 @@ Some links that may be helpful, should you want them:
 - `db/` contains the database setup and connection code. No modifications should
   be necessary to this folder
 
+## Database Model
+
+The database model is fairly simple with 4 interconnected tables.
+
+![Database Model](db/schema.png)
+
+- `attachments` -- connects to `contract.id` and `email.id`
+- `conversations` -- connects to `contract.id`
+- `emails` -- connected to `conversation.id`
+
 ## Tasks
 
 You will fix a bug, and then add a feature. These will be shared once you move on to the next
