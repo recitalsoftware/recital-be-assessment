@@ -80,8 +80,15 @@ will not be part of our marking of your solution.
 ### Debugging in Ruby
 
 If you'd like line-by-line debugging, you can drop into a debug session in the
-command line by placing `debugger` as a line of code wherever your want. This
-works as a normal line of code, so you can use conditionals to start a debug
+command line by using the ruby debugger. To get into the debugger add the below code
+
+```
+require "debug"
+
+binding.break
+```
+
+This works as a normal line of code, so you can use conditionals to start a debug
 session only in some situations. See the links below for commands to use in this
 interface.
 
@@ -90,7 +97,7 @@ only that test. e.g. `bundle exec rspec
 spec/jobs/process_email_webhook_job_spec.rb:18`. When a test fails, rspec
 gives you this command format for the specific failure at the bottom of its output.
 
-**These two tricks combine well: you can put `debugger` in the code, and then
+**These two tricks combine well: you can put a break in the code, and then
 run only the failing rspec test, which will immediately drop you into a debug
 session in the failing situation.**
 
