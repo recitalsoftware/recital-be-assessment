@@ -150,9 +150,16 @@ The database model is fairly simple with 4 interconnected tables.
 
 ![Database Model](db/schema.png)
 
-- `attachments` -- connects to `contract.id` and `email.id`
-- `conversations` -- connects to `contract.id`
-- `emails` -- connected to `conversation.id`
+- `attachments`
+  - `email_id` -- many-to-one relationship to `emails.id`
+  - `contract_id` -- many-to-one relationship to `contracts.id`
+  - `external_id` -- unique attachment identifier provided by email syncing service api
+- `conversations`
+  - `contract_id` -- many-to-many relationship to `contracts.id`
+  - `external_id` -- unique email thread conversation identifier provided by email syncing service api
+- `emails`
+  - `conversation_id` -- many-to-one relationship to `conversations.id`
+  - `external_id` -- unique email message identifier provided by email syncing service api
 
 ## Tasks
 
