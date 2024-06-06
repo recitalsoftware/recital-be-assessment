@@ -1,11 +1,38 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
-
 version: 2
 updates:
-  - package-ecosystem: "bundler" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
+      day: "tuesday"
+    # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#commit-message
+    commit-message:
+      # Use our PR title naming convention
+      prefix: "UPGRADE - "
+
+  - package-ecosystem: "bundler"
+    directory: "/"
+    # Only create pull requests to update lockfiles. Ignore any new versions
+    # that would require package manifest changes.
+    versioning-strategy: lockfile-only
+    allow:
+      # By default, dependabot updates only direct dependencies. This updates
+      # sub-/transitive dependencies
+      - dependency-type: "all"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      # Emre prefers these at noon his time
+      timezone: "Europe/Istanbul"
+      time: "12:00"
+    commit-message:
+      # Use our PR title naming convention
+      prefix: "UPGRADE - "
+    groups:
+      # Dependabot grouped updates:
+      # Docs at https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#groups
+      # This is the name of your group, it will be used in PR titles and branch
+      # names
+      dependencies:
+        patterns:
+          - "*"
